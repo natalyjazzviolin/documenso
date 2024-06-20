@@ -25,13 +25,13 @@ type SharePageOpenGraphImageProps = {
 
 export async function GET(_request: Request, { params: { slug } }: SharePageOpenGraphImageProps) {
   // Removed interSemiBold, interRegular from the array below
-  const [caveatRegular, shareFrameImage] = await Promise.all([
-    // fetch(new URL('@documenso/assets/fonts/inter-semibold.ttf', import.meta.url)).then(
-    //   async (res) => res.arrayBuffer(),
-    // ),
-    // fetch(new URL('@documenso/assets/fonts/inter-regular.ttf', import.meta.url)).then(async (res) =>
-    //   res.arrayBuffer(),
-    // ),
+  const [interSemiBold, interRegular, caveatRegular, shareFrameImage] = await Promise.all([
+    fetch(new URL('@documenso/assets/fonts/inter-semibold.ttf', import.meta.url)).then(
+      async (res) => res.arrayBuffer(),
+    ),
+    fetch(new URL('@documenso/assets/fonts/inter-regular.ttf', import.meta.url)).then(async (res) =>
+      res.arrayBuffer(),
+    ),
     fetch(new URL('@documenso/assets/fonts/caveat-regular.ttf', import.meta.url)).then(
       async (res) => res.arrayBuffer(),
     ),

@@ -24,7 +24,8 @@ type SharePageOpenGraphImageProps = {
 };
 
 export async function GET(_request: Request, { params: { slug } }: SharePageOpenGraphImageProps) {
-  const [interSemiBold, interRegular, caveatRegular, shareFrameImage] = await Promise.all([
+  // Removed interSemiBold, interRegular from the array below
+  const [caveatRegular, shareFrameImage] = await Promise.all([
     // fetch(new URL('@documenso/assets/fonts/inter-semibold.ttf', import.meta.url)).then(
     //   async (res) => res.arrayBuffer(),
     // ),

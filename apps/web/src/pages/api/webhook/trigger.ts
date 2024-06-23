@@ -1,7 +1,7 @@
 import { handlerTriggerWebhooks } from '@documenso/lib/server-only/webhooks/trigger/handler';
 
 export const config = {
-  maxDuration: 60,
+  maxDuration: 300,
   api: {
     bodyParser: {
       sizeLimit: '50mb',
